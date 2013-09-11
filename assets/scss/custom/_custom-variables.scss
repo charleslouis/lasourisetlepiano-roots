@@ -16,8 +16,8 @@ $monoFontFamily:        Monaco, Menlo, Consolas, "Courier New", monospace !defau
 // Grays
 // -------------------------
 $black:                 #2D2D2D !default;
-$grayDarker:            #323232 !default;
-$grayDark:            	#4d4d4d !default;
+$gray-darker:            #323232 !default;
+$gray-dark:            	#4d4d4d !default;
 $gray:                  #A0A0A0 !default;
 $grayLight:             lighten($gray, 10%) !default;
 $grayLighter:           #F1F1F1 !default;
@@ -40,12 +40,12 @@ $purple:                #39398D !default;
 // Scaffolding
 // -------------------------
 $bodyBackground:        $white !default;
-$textColor:             $grayDark !default;
+$textColor:             $gray-dark !default;
 
 /*==========  components  ==========*/
 
 // banner
-$banner-background-color: $orange;
+$navbar-default-bg: $orange;
 $banner-font-color: $grayLighter;
 
 // microformats
@@ -69,3 +69,17 @@ $map: url($image_folder + "map/map1.png");
 $topbar-height: 60px !default;
 $medium-topbar-height: 90px !default;
 $large-topbar-height: 120px !default;
+
+// Media Queries
+
+$small-screen: 768px;
+$medium-screen: 1280px;
+$large-screen: 1440px;
+
+$screen: "only screen";
+$small: "only screen and (min-width: #{$small-screen})";
+$medium: "only screen and (min-width: #{$medium-screen})";
+$large: "only screen and (min-width: #{$large-screen})";
+$landscape: "only screen and (orientation: landscape)";
+$portrait: "only screen and (orientation: portrait)";
+$topbar-media-query: "only screen and (orientation: portrait)";

@@ -1,6 +1,6 @@
 // <p>
 .leader{
-	font-size: $h4-font-size - em-calc(5);
+	// font-size: $h4-font-size - em-calc(5);
 }
 
 @media #{$small} {	
@@ -8,7 +8,7 @@
   	font-size: 1.25em;
   }
   .leader{ 
-  	font-size: $h4-font-size
+  	// font-size: $h4-font-size
   }
 }
 
@@ -34,7 +34,7 @@ p,
 }
 
 p a:hover{
-  border-color: $anchor-font-color-hover;
+  border-color: $link-hover-color;
 }
 
 .touch p a{

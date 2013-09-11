@@ -51,8 +51,8 @@ module.exports = function(grunt) {
       },
       dev: {
         options: {
-          beautify: true,          
-        },   
+          beautify: true,
+        },
         files: {
           'assets/js/scripts.min.js': [
             'assets/js/plugins/bootstrap/transition.js',
@@ -75,7 +75,7 @@ module.exports = function(grunt) {
       dist: {
         options: {
           report: 'gzip',
-        },        
+        },
         files: {
           'assets/js/scripts.min.js': [
             'assets/js/plugins/bootstrap/transition.js',
@@ -139,45 +139,14 @@ module.exports = function(grunt) {
     watch: {
       sass: {
         files: [
-          'scss/custom/*.scss'
-        ],
-        tasks: ['sass:dev'],
-        options: {
-          // Start a live reload server on the default port 35729
-          livereload: true,
-        }
-      },
-      html: {
-        files: [
-          '*.php',
-          '*.html'
-        ],
-        options: {
-          // Start a live reload server on the default port 35729
-          livereload: true,
-        }
-      },
-      js: {
-        files: [
-          'js/custom/*.js'
-        ],
-        tasks: ['jshint', 'uglify:dev'],
-        options: {
-          // Start a live reload server on the default port 35729
-          livereload: true,
-        }
-      }
-    },
-    watch: {
-      sass: {
-        files: [
           'assets/scss/*.scss',
-          'assets/scss/bootstrap/*.scss'
+          'assets/scss/bootstrap/*.scss',
+          'assets/scss/custom/*.scss'
         ],
         tasks: ['sass:dev', 'version'],
         options: {
           livereload: true,
-        }        
+        }
       },
       html: {
         files: [
@@ -213,7 +182,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-wp-version');
   grunt.loadNpmTasks('grunt-remove-logging');
   grunt.loadNpmTasks('grunt-svgmin');
-  grunt.loadNpmTasks('grunt-smushit');  
+  grunt.loadNpmTasks('grunt-smushit');
 
   // Register tasks
   grunt.registerTask('default', [
@@ -230,9 +199,8 @@ module.exports = function(grunt) {
   grunt.registerTask('img', [
     'svgmin',
     'smushit'
-  ]);  
+  ]);
   grunt.registerTask('dev', [
     'watch',
   ]);
-
 };
