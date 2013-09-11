@@ -1,0 +1,101 @@
+//Map and location
+
+/*==========  map and map wrapper  ==========*/
+
+.map-wrapper {
+	@extend .large-12;
+	margin-bottom: 1em;
+	float: left;
+}
+
+.map {
+	display: block;
+	width: 100%;
+	height: 0;
+	padding-top: 75%;
+	background-image: $map;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: auto 100%;
+	border: $microformat-border-width $microformat-border-style $microformat-border-color;
+}
+.oldie .map{
+	padding-top: 0;
+	height: 400px;
+}
+
+@media #{$small} {
+	.map{
+		padding-top: 65%;
+	}
+}
+@media #{$topbar-media-query} {
+	.map{
+		padding-top: 50%;		
+	}
+}
+@media #{$medium} {
+	.map{
+		padding-top: 40%;
+	}
+}
+@media #{$large} {
+	.map{
+		padding-top: 33.33333%;
+	}
+}
+.gooleMapLink{
+	display: block;
+	width: 100%;
+	padding-right: 1em;
+	// border: $microformat-border-width $microformat-border-style $microformat-border-color;
+	// border-top:none;
+	font-size: 0.875em;
+	line-height: 3em;
+	text-align: right;
+}
+
+
+// .access-google {
+// 	float: right;
+// 	line-height:2em;
+// }
+//  .phone {
+//  	margin-top: 1.5em;
+//  	// margin-bottom: 0;
+//  	// line-height: 1.5em
+//  }
+// .mail {
+// 	margin-bottom: 1.5em;
+// 	text-decoration: underline;
+// }
+
+// .generalIcon-phone:before {
+// 	// content: $phone;
+// }
+// .generalIcon-mail:before {
+// 	// content: $mail;
+// }
+
+// .generalIcon-metro,
+// .generalIcon-tramway,
+// .generalIcon-parking {
+// 	float: left;
+// 	width: 1.25em;
+// 	height: 1.25em;
+// 	margin: 0 0.5em 0 0.45em;
+// 	line-height: 1.25em;
+// 	// background-image: $transportation;
+// 	background-repeat: no-repeat;
+//     background-size: cover;
+// }
+
+// .generalIcon-metro {
+// 	background-position: 0 -20px;
+// }
+// .generalIcon-tramway {
+// 	background-position: 0 -40px;
+// }
+// .generalIcon-parking {
+// 	background-position: 0 -60px;
+// }

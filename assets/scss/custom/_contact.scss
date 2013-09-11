@@ -1,0 +1,76 @@
+
+/*==========  cartouche infos (tel/mail/adresse)  ==========*/
+.location-info-wrapper {
+	@extend .columns;
+	@extend .large-3;
+	@extend .small-12;
+}
+
+.images-cloud-wrapper {
+	@extend .columns;
+	width: 100%;
+	float: left;
+	.row .columns{
+		padding: 0;
+	}
+	.row .grand-pic img{
+		margin-bottom: 0;
+	}
+	img{
+		min-width: 100%;
+		height: auto;
+		display: block;
+		@extend .grayscale;
+	}	
+}
+
+.full-pic{
+	width: 100%;
+	overflow: hidden;
+	img{
+		min-width: 100%;
+	}
+}
+
+.images-cloud{
+	@extend .clearfix;
+}
+
+@media screen and (min-width: 400px){
+	.location-info-wrapper{
+		width: auto;
+	}
+}
+@media screen and (min-width: 600px){
+	.map-wrapper{
+		width: 50%;
+	}
+}
+@media #{$small}{
+	.location-info-wrapper{
+		// width: 40%;			
+	}
+	.map-wrapper{
+		width: 60%;
+		padding-left: 0;
+	}
+	.images-cloud{
+		background-color: $grayDark;
+	}
+}
+@media screen and (min-width: 900px){
+	.location-info-wrapper{
+		width: 35%;			
+	}
+	.map-wrapper{
+		width: 65%;
+	}
+}
+@media #{$medium}{
+	.location-info-wrapper{
+		width: 25%;			
+	}
+	.map-wrapper{
+		width: 75%;
+	}
+}

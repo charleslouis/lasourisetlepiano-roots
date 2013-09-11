@@ -1,0 +1,27 @@
+.contain-to-grid{
+	position: fixed;
+	z-index: 980;
+}
+.brand{
+	@extend .hide-text;
+  border: none;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 5px;
+  width: 75px;
+  height: $topbar-height;
+  background-image: $logo;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+.no-svg {
+	.brand{
+		top: -5px;
+		background: $logo-fallback no-repeat;
+	}
+}
+
+.menu-access{
+	@extend .toggle-topbar;
+}

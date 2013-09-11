@@ -1,0 +1,132 @@
+/*=============================================================
+=            pushing menu to header             =
+=============================================================*/
+/**
+*
+* Style the menu in the header as in larger media queries and oldie browsers
+* Default menu with relative positioning is styled in main-menu-default
+*
+**/
+
+/*==========  create a mixin to avoid repetition btw Media Queries and Old browsers   ==========*/
+
+@mixin push_menu_to_top(){
+	.main-menu{		
+		position: fixed;
+		top: ($medium-topbar-height/3.5);
+		right: 0;
+		z-index: 1000;
+	}
+	
+	.navlist{
+		@include clearfix();
+		float: right;
+	}
+
+	.navtoplink{ //hide the TOP & arrow
+		display: none;
+	}
+
+	.menu-item-main-menu,
+	.menu-item-main-menu:last-child,
+	.menu-item-main-menu  a{
+		border: none;
+		float: left;
+	}
+
+	.menu-item-main-menu {
+		position: relative;
+		a{
+			display: inline-block;
+			position: relative;
+			padding: (($medium-topbar-height/3)/4) emCalc(8);			
+			margin: 0 emCalc(8);
+			font-size: (($medium-topbar-height/3)/2);
+			font-weight: normal;
+			color: $grayLight;
+			&:before,
+			&:after{
+				position: absolute;
+				left: 0;
+				width: 100%;
+				height: 1px;
+				background: #fff;
+				content: '';
+				opacity: 0;
+				@include transition(all 0.3s);
+			}
+			&:before{
+				top: 0;
+				@include transform(translateY(-10px));
+			}
+			&:after{
+				bottom: 0;
+				@include transform(translateY(10px));
+			}
+		}
+		a:hover,
+		a:focus,
+		&.active a{
+			background-color: transparent;
+			color: $white;
+			&:before,
+			&:after{
+				opacity: 1;
+				@include transform(translateY(0));
+			}
+		}
+		&.active a{
+			color: $white;
+			&:hover,
+			&:focus{
+				background-color: transparent;
+				color: $white;
+			}
+		}
+	}
+}
+
+
+/*==========  use the mixin for MQ and Oldies  ==========*/
+
+@media #{$topbar-media-query}{
+	@include push_menu_to_top();
+	.main-menu{
+		padding-right: 2em;
+	}
+}
+
+.oldie,
+.ie8,
+.ie7{
+	@include push_menu_to_top();
+	.main-menu{
+		top: -8px;
+	}
+	.menu-item-main-menu {
+		a{
+			line-height: 1em;
+		}
+		&.active a,
+		a:hover,
+		a:focus{
+			border-bottom: solid 1px $white ;
+		}
+	}
+}
+
+/*==========  fire large Mq  ==========*/
+
+@media #{$large} {
+	.main-menu{		
+		top: ($large-topbar-height/3);
+	}
+	.menu-item-main-menu {
+		a{
+			font-size: 1.125em;
+		}
+	}
+}
+
+
+/*-----  End of media queries pushing menu to header   ------*/

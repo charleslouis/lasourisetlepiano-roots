@@ -1,0 +1,54 @@
+/*=============================================================
+=            enlarge header to welcome the main menu 					=
+=============================================================*/
+/**
+*
+* Style the menu in the header as in larger media queries and oldie browsers
+* Default header is styled in header-default
+*
+**/
+
+/*==========  Oldies  ==========*/
+.oldie{
+	.menu-access{ //lets hide the menu access in the header since main-menu sits in the top for oldie browsers
+		display: none;
+	}
+}
+
+/*==========  Media Queries   ==========*/
+
+@media #{$topbar-media-query} {
+	.top-bar{
+		height: $medium-topbar-height;
+	}
+	.brand{
+  	top: 5px;
+  	left: 5px;
+	  width: 105px;
+	  height: $medium-topbar-height - 5px;
+	  background-image: $logo;
+	  background-repeat: no-repeat;
+	  background-size: 100%;
+	}
+	.no-svg .brand{
+		top: -10px;
+		background-size: 160px;
+	}
+}
+
+@media #{$medium} {
+	.contain-to-grid .top-bar{
+		max-width: none;
+	}
+}
+
+@media #{$large} {
+	.top-bar{
+		height: $large-topbar-height;
+	}
+	.brand{
+	  width: 145px;
+	  height: 120px;
+		height: $large-topbar-height - 5px;
+  }
+}

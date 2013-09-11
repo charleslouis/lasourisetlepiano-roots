@@ -1,0 +1,50 @@
+/*==========  Oldie  ==========*/
+
+.oldie {
+	.work-w-us-prose{
+		padding-right: 4em;
+	}
+	.work-w-us-contact{
+		min-width: 350px;
+	}
+}
+
+/*==========  MQ  ==========*/
+
+@media #{$small}{
+	.work-w-us-prose,
+	.work-w-us-contact{
+		@include grid-column(6);
+	}
+	.work-w-us-prose{
+		p{
+			margin-bottom: 0;
+		}
+	}
+	.work-w-us-contact{
+		padding-top: 0;
+	}
+}
+
+@media #{$topbar-media-query}{
+	.work-w-us-prose{
+		@include grid-column(7);
+	}
+
+	.work-w-us-contact{
+		@include grid-column(5);
+	}
+	.work-w-us-contact{
+		padding-top: 0.5em;
+	}
+}
+
+@media #{$medium}{
+	.work-w-us-prose{
+		@include grid-column(8);
+	}
+
+	.work-w-us-contact{
+		@include grid-column(4);
+	}
+}
