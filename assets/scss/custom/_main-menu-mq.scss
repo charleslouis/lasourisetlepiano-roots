@@ -57,11 +57,11 @@
 			}
 			&:before{
 				top: 0;
-				@include transform(translateY(-10px));
+				@include translate(0, -10px)
 			}
 			&:after{
 				bottom: 0;
-				@include transform(translateY(10px));
+				@include translate(0, 10px)
 			}
 		}
 		a:hover,
@@ -72,7 +72,7 @@
 			&:before,
 			&:after{
 				opacity: 1;
-				@include transform(translateY(0));
+				@include translate(0, 0)
 			}
 		}
 		&.active a{

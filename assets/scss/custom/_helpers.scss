@@ -2,7 +2,7 @@
 	text-indent: -9999px;
 }
 
-.small-hidden{
+.col-sm-hidden{
   display: none;
   @media #{$small} {
     display: block;

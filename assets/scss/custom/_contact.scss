@@ -2,8 +2,8 @@
 /*==========  cartouche infos (tel/mail/adresse)  ==========*/
 .location-info-wrapper {
 	@extend .columns;
-	@extend .large-3;
-	@extend .small-12;
+	@extend .col-lg-3;
+	@extend .col-sm-12;
 }
 
 .images-cloud-wrapper {

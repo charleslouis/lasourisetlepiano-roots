@@ -1,21 +1,13 @@
-<header class="banner navbar navbar-default navbar-static-top" role="banner">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="<?php echo home_url(); ?>/"><?php bloginfo('name'); ?></a>
-    </div>
-
-    <nav class="collapse navbar-collapse" role="navigation">
-      <?php
-        if (has_nav_menu('primary_navigation')) :
-          wp_nav_menu(array('theme_location' => 'primary_navigation', 'menu_class' => 'nav navbar-nav'));
-        endif;
-      ?>
-    </nav>
-  </div>
-</header>
+<div class="contain-to-grid">
+  <!-- Starting the Top-Bar -->
+  <header id="#top" class="top-bar" role="banner">
+    <ul class="title-area">
+        <li class="name">
+          <h1><a class="brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+        </li>
+        <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+        <li class="menu-icon menu-access"><a href="#menu"><span class="menu-access-label">Menu</span></a></li>
+    </ul>
+  </header>
+  <!-- End of Top-Bar -->
+</div>

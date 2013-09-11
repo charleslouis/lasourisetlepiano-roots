@@ -29,8 +29,8 @@ $white:                 #fff !default;
 $blue:                  #0B60B3 !default;
 $blueDark:              #115699 !default;
 $green:                 lighten(#c7d352, 10%) !default;
-$orange:                   #ca4f3b !default;
-$orange:                   #E46350 !default;
+$orange:                #ca4f3b !default;
+$orange:                #E46350 !default;
 $orange:             		#E46350 !default;
 $yellow:                #ffc40d !default;
 $orange:                #E63126 !default;
@@ -70,7 +70,8 @@ $topbar-height: 60px !default;
 $medium-topbar-height: 90px !default;
 $large-topbar-height: 120px !default;
 
-// Media Queries
+
+/*==========  Media Queries  ==========*/
 
 $small-screen: 768px;
 $medium-screen: 1280px;
@@ -83,3 +84,33 @@ $large: "only screen and (min-width: #{$large-screen})";
 $landscape: "only screen and (orientation: landscape)";
 $portrait: "only screen and (orientation: portrait)";
 $topbar-media-query: "only screen and (orientation: portrait)";
+
+
+
+// Control padding and margin
+
+$microformat-padding: emCalc(16);
+// $microformat-margin: emCalc(0, 0, 20, 0);
+
+// Control the border styles
+
+$microformat-border-width: 1px;
+$microformat-border-style: solid;
+$microformat-border-color: $brand-primary;
+
+// Control full name font styles
+
+// $microformat-fullname-font-weight: bold;
+// $microformat-fullname-font-size: emCalc(15);
+
+// Control the summary font styles
+
+// $microformat-summary-font-weight: bold;
+
+// Control abbr padding
+// $microformat-abbr-padding: emCalc(0, 1);
+
+// Control abbr font styles
+
+// $microformat-abbr-font-weight: bold;
+// $microformat-abbr-font-decoration: none;
